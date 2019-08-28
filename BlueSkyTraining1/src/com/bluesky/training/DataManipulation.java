@@ -38,13 +38,13 @@ public class DataManipulation {
 
 		HashMap<Integer, String> sourcemap = new LinkedHashMap<Integer, String>();
 		while (resultset.next()) {
-			String temp = dataModification(resultset);
+			String temp = toString(resultset);
 			sourcemap.put(resultset.getInt("STLOC_ID"), temp);
 		}
 
 		HashMap<Integer, String> deltamap = new LinkedHashMap<Integer, String>();
 		while (resultset1.next()) {
-			String temp = dataModification(resultset1);
+			String temp = toString(resultset1);
 			deltamap.put(resultset1.getInt("STLOC_ID"), temp);
 
 		}
@@ -75,7 +75,7 @@ public class DataManipulation {
 
 	}
 
-	public String dataModification(ResultSet resultset) throws SQLException {
+	public String toString(ResultSet resultset) throws SQLException {
 		String temp = resultset.getString("IDENTIFIER") + "," + resultset.getString("PHONE") + ","
 				+ resultset.getString("FAX") + "," + resultset.getString("ADDRESS1") + ","
 				+ resultset.getString("ADDRESS2") + "," + resultset.getString("ADDRESS3") + ","
