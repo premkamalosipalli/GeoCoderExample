@@ -13,7 +13,10 @@ public class Address {
 	private String stateProvince;
 	private String country;
 	private String zipCode;
-
+	private String active;
+	private String latitude;
+	private String longitude;
+	
 	public String getStloc_id() {
 		return stloc_id;
 	}
@@ -62,10 +65,7 @@ public class Address {
 		this.active = active;
 	}
 
-	private String active;
 
-	private String latitude;
-	private String longitude;
 
 	public String getAddress1() {
 		return address1;
