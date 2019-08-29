@@ -36,6 +36,7 @@ public class StoreLocation {
 		if(object instanceof StoreLocation) {
 			
 			StoreLocation object1=(StoreLocation)object;
+			
 			if(stloc_id==object1.stloc_id && identifier.equals(object1.identifier) && 
 					phone.equals(object1.phone) && fax.equals(object1.fax) && 
 					address1.equals(object1.address1) && address2.equals(object1.address2) && 
@@ -57,8 +58,11 @@ public class StoreLocation {
 		if(object.equals(object1)) {
 			
 			System.out.println("Both are equal");
+			
 		}else {
+			
 			System.out.println("Both are Not equal");
+			
 		}
 
 	}
